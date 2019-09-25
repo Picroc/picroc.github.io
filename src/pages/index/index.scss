@@ -1,6 +1,17 @@
 @import '../../components/color/color.scss';
 @import '../../components/type/type.scss';
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 h1 {
     font-family: 'Quicksand';
     font-style: normal;

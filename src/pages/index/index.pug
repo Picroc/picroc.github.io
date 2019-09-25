@@ -1,4 +1,6 @@
 extends ../base
+include ../../components/text-field/text-field
+include ../../components/drop-down/drop-down
 block title
     | Index page
 block main
@@ -6,3 +8,7 @@ block main
     h2 Just Testin
     h3 More tests
     p Hello theere
+    +text-field
+    +drop-down('kek', 'My gottttt my gottttt my gotttttasdasdasdasdas', 1, 2, 3)
+
+    

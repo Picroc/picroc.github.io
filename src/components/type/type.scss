@@ -5,7 +5,7 @@
         url('../../static/fonts/Quicksand-Regular.woff') format('woff'),
         url('../../static/fonts/Quicksand-Regular.otf') format('opentype'),
         url('../../static/fonts/Quicksand-Regular.svg') format('svg');
-    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
         url('../../static/fonts/Quicksand-Bold.woff') format('woff'),
         url('../../static/fonts/Quicksand-Bold.otf') format('opentype'),
         url('../../static/fonts/Quicksand-Bold.svg') format('svg');
-    font-style: bold;
+    font-weight: bold;
 }
 
 @font-face {
@@ -25,7 +25,7 @@
         url('../../static/fonts/Montserrat-Regular.woff') format('woff'),
         url('../../static/fonts/Montserrat-Regular.otf') format('opentype'),
         url('../../static/fonts/Montserrat-Regular.svg') format('svg');
-    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
@@ -35,5 +35,5 @@
         url('../../static/fonts/Montserrat-Bold.woff') format('woff'),
         url('../../static/fonts/Montserrat-Bold.otf') format('opentype'),
         url('../../static/fonts/Montserrat-Bold.svg') format('svg');
-    font-style: bold;
+    font-weight: bold;
 }
