@@ -52,6 +52,11 @@ const common = {
             template: path.join(__dirname, 'src') + '/pages/index/index.pug',
             inject: true
         }),
+        new webpack.ProvidePlugin({
+            $: "jquery/dist/jquery.min.js",
+            jQuery: "jquery/dist/jquery.min.js",
+            "window.jQuery": "jquery/dist/jquery.min.js"
+        }),
         new htmlWebpackPugPlugin()
     ]
 }

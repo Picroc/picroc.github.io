@@ -1,8 +1,10 @@
 include __element/drop-down__element
 mixin drop-down(id, text, ...elems)
-    .drop-down&attributes(attributes)
-        p= text
-        i.material-icons keyboard_arrow_down
-        div(id= id)
+    .drop-down-wrapper
+        .drop-down(onclick=`dropDownClickHandler(${id})`)
+            p= text
+            i.material-icons keyboard_arrow_down
+            - const opened=false;
+        div(id= id, class=opened ? 'opened' : '').drop-down-list
             each elem in elems
-                    +element(elem).drop-down__element_normal
+                    +element(elem).drop-down-list__element_normal
