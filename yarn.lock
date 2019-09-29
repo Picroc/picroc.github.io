@@ -1029,7 +1029,7 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
-constantinople@^3.0.1, constantinople@^3.1.2:
+constantinople@^3.0.1, constantinople@^3.0.2, constantinople@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/constantinople/-/constantinople-3.1.2.tgz#d45ed724f57d3d10500017a7d3a889c1381ae647"
   integrity sha512-yePcBqEFhLOqSBtwYOGGS1exHo/s1xjekXiinh4itpNQGCu4KA1euPh1fg07N2wMITZXQkBz75Ntdt1ctGZouw==
@@ -2238,6 +2238,16 @@ html-webpack-plugin@^3.2.0:
     tapable "^1.0.0"
     toposort "^1.0.0"
     util.promisify "1.0.0"
+
+html-webpack-pug-plugin@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/html-webpack-pug-plugin/-/html-webpack-pug-plugin-2.0.0.tgz#875773ded14f7857b60e81f6a393588ce3deb367"
+  integrity sha512-4RZIZGIuIJBb44jFpeNuXyQQ7degfyl70rIzgOyOhYAh6hWfvYHQCLXUL/u5V9HUtp8Ai4P4CGQp8VZdYQBXmg==
+  dependencies:
+    pug-lexer "^4.0.0"
+    pug-parser "^5.0.0"
+    pug-source-gen "0.0.2"
+    pug-walk "^1.1.7"
 
 htmlparser2@^3.3.0:
   version "3.10.1"
@@ -3944,7 +3954,7 @@ pug-filters@^3.1.1:
     resolve "^1.1.6"
     uglify-js "^2.6.1"
 
-pug-lexer@^4.1.0:
+pug-lexer@^4.0.0, pug-lexer@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/pug-lexer/-/pug-lexer-4.1.0.tgz#531cde48c7c0b1fcbbc2b85485c8665e31489cfd"
   integrity sha512-i55yzEBtjm0mlplW4LoANq7k3S8gDdfC6+LThGEvsK4FuobcKfDAwt6V4jKPH9RtiE3a2Akfg5UpafZ1OksaPA==
@@ -3978,7 +3988,7 @@ pug-loader@^2.4.0:
     pug-walk "^1.0.0"
     resolve "^1.1.7"
 
-pug-parser@^5.0.1:
+pug-parser@^5.0.0, pug-parser@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/pug-parser/-/pug-parser-5.0.1.tgz#03e7ada48b6840bd3822f867d7d90f842d0ffdc9"
   integrity sha512-nGHqK+w07p5/PsPIyzkTQfzlYfuqoiGjaoqHv1LjOv2ZLXmGX1O+4Vcvps+P4LhxZ3drYSljjq4b+Naid126wA==
@@ -3991,6 +4001,16 @@ pug-runtime@^2.0.5:
   resolved "https://registry.yarnpkg.com/pug-runtime/-/pug-runtime-2.0.5.tgz#6da7976c36bf22f68e733c359240d8ae7a32953a"
   integrity sha512-P+rXKn9un4fQY77wtpcuFyvFaBww7/91f3jHa154qU26qFAnOe6SW1CbIDcxiG5lLK9HazYrMCCuDvNgDQNptw==
 
+pug-source-gen@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/pug-source-gen/-/pug-source-gen-0.0.2.tgz#76d7753d89693c6846578c80da1628b8c6fc6fdb"
+  integrity sha1-dtd1PYlpPGhGV4yA2hYouMb8b9s=
+  dependencies:
+    constantinople "^3.0.2"
+    object-assign "^4.0.1"
+    pug-walk "0.0.3"
+    repeat-string "^1.5.2"
+
 pug-strip-comments@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/pug-strip-comments/-/pug-strip-comments-1.0.4.tgz#cc1b6de1f6e8f5931cf02ec66cdffd3f50eaf8a8"
@@ -3998,7 +4018,12 @@ pug-strip-comments@^1.0.4:
   dependencies:
     pug-error "^1.3.3"
 
-pug-walk@^1.0.0, pug-walk@^1.1.8:
+pug-walk@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-0.0.3.tgz#c28be7bcc540f24b83d274472410827c84e31ac6"
+  integrity sha1-wovnvMVA8kuD0nRHJBCCfITjGsY=
+
+pug-walk@^1.0.0, pug-walk@^1.1.7, pug-walk@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-1.1.8.tgz#b408f67f27912f8c21da2f45b7230c4bd2a5ea7a"
   integrity sha512-GMu3M5nUL3fju4/egXwZO0XLi6fW/K3T3VTgFQ14GxNi8btlxgT5qZL//JwZFm/2Fa64J/PNS8AZeys3wiMkVA==
@@ -5385,10 +5410,10 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.40.2:
-  version "4.40.2"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.40.2.tgz#d21433d250f900bf0facbabe8f50d585b2dc30a7"
-  integrity sha512-5nIvteTDCUws2DVvP9Qe+JPla7kWPPIDFZv55To7IycHWZ+Z5qBdaBYPyuXWdhggTufZkQwfIK+5rKQTVovm2A==
+webpack@^4.41.0:
+  version "4.41.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.0.tgz#db6a254bde671769f7c14e90a1a55e73602fc70b"
+  integrity sha512-yNV98U4r7wX1VJAj5kyMsu36T8RPPQntcb5fJLOsMz/pt/WrKC0Vp1bAlqPLkA1LegSwQwf6P+kAbyhRKVQ72g==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"

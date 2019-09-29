@@ -1,6 +1,7 @@
-import createMenu from "../../components/menu/menu";
+import '../../base.scss';
 
-const menu = createMenu(['Main', 'Index'], 'menu');
-document.body.appendChild(menu);
+// COMPONENTS SCRIPTS IMPORTS
+import '../../components/text-field/text-field';
+import '../../components/drop-down/drop-down';
 
 console.log('on index page');

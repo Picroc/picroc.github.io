@@ -1,21 +1,10 @@
-include components/text-field/text-field
-include components/drop-down/drop-down
-
 doctype html
 html
     head
         meta(charset = 'utf-8')
         meta(name='viewport', content="initial-scale=1.0, width=device-width")
         link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
-        link(rel="stylesheet", href="base.scss")
         title
             block title
-            | Index page
     body
         block main
-        h1 Some really good pages
-        h2 Just Testin
-        h3 More tests
-        p Hello theere
-        +text-field
-        +drop-down('kek', 'My gottttt my gottttt my gotttttasdasdasdasdas', 1, 2, 3)

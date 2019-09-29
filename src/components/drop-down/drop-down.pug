@@ -1,6 +1,8 @@
+include __element/drop-down__element
 mixin drop-down(id, text, ...elems)
-    div.drop-down
+    .drop-down&attributes(attributes)
         p= text
         i.material-icons keyboard_arrow_down
-    
-    script(src="components/drop-down/drop-down.js")
+        div(id= id)
+            each elem in elems
+                    +element(elem).drop-down__element_normal
