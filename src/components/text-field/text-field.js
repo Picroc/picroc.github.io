@@ -1,1 +1,1 @@
-import './text-field.scss';
+import '/components/text-field/text-field.scss';

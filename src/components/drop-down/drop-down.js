@@ -1,1 +1,1 @@
-import './drop-down.scss';
+import '/components/drop-down/drop-down.scss';
