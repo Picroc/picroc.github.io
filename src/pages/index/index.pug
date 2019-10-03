@@ -1,6 +1,7 @@
 extends ../../base
 include ../../components/text-field/text-field
 include ../../components/drop-down/drop-down
+include ../../components/checkbox-button/checkbox-button
 block title
     | Index page
 block main
@@ -10,7 +11,13 @@ block main
     p Hello theere
     br
     +text-field
+    br
     +drop-down('my', 'ДД.ММ.ГГГГ', {date: true}, 'Baths')
-    +drop-down('my2', 'Number of classesssssss', {opened: true}, 1, 2, 3, 4)
+    br
+    +drop-down('my2', 'Number of classesssssss', {}, 1, 2, 3, 4)
+    br
+    +checkbox-button('my3', 'Hello there')
+    br
+    +checkbox-button('my4', 'Hello there', true)
 
     

@@ -1,0 +1,51 @@
+.checkbox-button {
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+
+    &.checked {
+        border: 1px solid #BC9CFF;
+    }
+}
+
+.checkbox-button__mark.checked {
+    width: 6px;
+    height: 8px;
+
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    margin:auto;
+    margin-top: 5px;
+
+    transform: rotate(45deg);
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 5px;
+        background: #fff;
+        border: 1px solid #fff;
+        left: -1px;
+        top: -1px;
+      }
+}
+
+.checkbox-button-wrapper {
+    cursor: pointer;
+    
+    & p {
+        display: inline-block;
+        line-height: 20px;
+
+        margin: 0;
+        vertical-align: top;
+        color: rgba(31, 32, 65, 0.5);
+    }
+}
