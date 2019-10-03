@@ -1,10 +1,14 @@
 include __element/drop-down__element
-mixin drop-down(id, text, ...elems)
+mixin drop-down(id, text, mods, ...elems)
     .drop-down-wrapper
-        .drop-down(onclick=`dropDownClickHandler(${id})`)
+        .drop-down(onclick=mods.date ? '' : `dropDownClickHandler(${id})`, class=mods.date ? 'drop-down_date' : '')
             p= text
             i.material-icons keyboard_arrow_down
-            - const opened=false;
-        div(id= id, class=opened ? 'opened' : '').drop-down-list
-            each elem in elems
-                    +element(elem).drop-down-list__element_normal
+            - const opened=mods.opened || false;
+        if !mods.date
+            div(id= id, class=opened ? 'opened' : '').drop-down-list
+                each elem in elems
+                        +element({text: elem, value: 0}).drop-down-list__element_normal
+        else
+            div(id= id, class=opened ? 'opened' : '').drop-down-list.drop-down-list_date
+                h3 Placeholder for calendar

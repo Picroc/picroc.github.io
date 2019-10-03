@@ -1,3 +1,10 @@
 mixin element(el)
     .drop-down-list__element
-        span= el
+        .element-text
+            h3= el.text
+        .incrementer
+            div(class= el.value===0 ? 'incrementer__button_disabled' : '').incrementer__button -
+            .incrementer__value
+                h3= el.value
+            .incrementer__button +
+

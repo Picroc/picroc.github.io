@@ -27,7 +27,7 @@ $root: 'drop-down';
 
     & p {
         display: inline-block;
-        max-width: 240px;
+        max-width: 160px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -54,14 +54,68 @@ $root: 'drop-down';
 
         overflow: hidden;
 
-        border: 1px solid rgba(31, 32, 65, 0.25);
+        border: 1px solid rgba($dark-shade, 0.25);
         border-top: rgba(0, 0, 0, 0);
 
         z-index: 1;
     }
 }
 
+.drop-down_date {
+    width: 150px;
+
+    & p {
+        max-width: 90px;
+    }
+
+    & + .drop-down-list_date {
+        background: #fff;
+        border: 1px solid rgba($dark-shade, 0.25) !important;
+    }
+}
+
 .drop-down-list__element {
     background: #fff;
     height: 40px;
+
+    padding-left: 15px;
+    padding-right: 7px;
+
+    & .element-text {
+        display: inline-block;
+    }
+}
+
+.incrementer {
+    float: right;
+
+    &__button {
+        display: inline-block;
+        cursor: pointer;
+
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba($dark-shade, 0.5);
+        color: rgba($dark-shade, 0.5);
+        border-radius: 22px;
+
+        text-align: center;
+        vertical-align: middle;
+        line-height: 28px;
+        font-size: 18px;
+
+        &_disabled {
+            cursor: default;
+            border-color: rgba($dark-shade, 0.25);
+            color: rgba($dark-shade, 0.25);
+        }
+    }
+
+    &__value {
+        display: inline-block;
+        width: 32px;
+
+        text-align: center;
+        vertical-align: middle;
+    }
 }
