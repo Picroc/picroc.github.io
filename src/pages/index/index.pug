@@ -2,6 +2,7 @@ extends ../../base
 include ../../components/text-field/text-field
 include ../../components/drop-down/drop-down
 include ../../components/checkbox-button/checkbox-button
+include ../../components/radio-button/radio-button
 block title
     | Index page
 block main
@@ -19,5 +20,10 @@ block main
     +checkbox-button('my3', 'Hello there')
     br
     +checkbox-button('my4', 'Hello there', true)
+    br
+    +radio-button('my5', 'mys1', 'Are you mine', true)
+    br
+    +radio-button('my6', 'mys1', 'Are you not mine', false)
+    
 
     

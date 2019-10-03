@@ -1,0 +1,5 @@
+mixin radio-button(id, group, text, selected)
+    .radio-button-wrapper(onclick=`onRadioClick(${id}, '${group}')`)
+        .radio-button(id=id, class=group, class=selected ? 'selected' : '')
+            .radio-button__mark
+        p= text
