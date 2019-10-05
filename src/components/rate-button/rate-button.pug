@@ -1,0 +1,6 @@
+mixin rate-button(id, rated)
+    .rate-button(id= id)
+        each i in [1,2,3,4,5]
+            div(class=`rate-button__mark_${i}`, onclick= `onRateClick("${id}", "${i}")`)
+                i.material-icons= i <= rated ? 'star' : 'star_border'
+

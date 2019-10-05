@@ -5,6 +5,7 @@ include ../../components/checkbox-button/checkbox-button
 include ../../components/radio-button/radio-button
 include ../../components/toggle-button/toggle-button
 include ../../components/like-button/like-button
+include ../../components/rate-button/rate-button
 block title
     | Index page
 block main
@@ -34,6 +35,8 @@ block main
     +like-button('lb1', 12, true)
     br
     +like-button('lb2', 2, false)
+    br
+    +rate-button('rb1', 0)
     
 
     
