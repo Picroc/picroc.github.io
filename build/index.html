@@ -3,10 +3,126 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Index page
     </title>
   </head>
   <body>
-    <h1>page index-pug</h1>
-  <script type="text/javascript" src="index.js"></script></body>
+    <h1>Some really good pages</h1>
+    <h2>Just Testin</h2>
+    <h3>More tests</h3>
+    <p>Hello theere</p><br>
+    <input class="text-field" type="text"><br>
+    <div class="drop-down-wrapper">
+      <div class="drop-down drop-down_date" onclick="">
+        <p>ДД.ММ.ГГГГ</p><i class="material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="drop-down-list drop-down-list_date" id="my">
+        <h3>Placeholder for calendar</h3>
+      </div>
+    </div><br>
+    <div class="drop-down-wrapper">
+      <div class="drop-down" onclick="dropDownClickHandler(my2)">
+        <p>Number of classesssssss</p><i class="material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="drop-down-list" id="my2">
+        <div class="drop-down-list__element">
+          <div class="element-text">
+            <h3>1</h3>
+          </div>
+          <div class="incrementer">
+            <div class="incrementer__button_disabled incrementer__button">-</div>
+            <div class="incrementer__value">
+              <h3>0</h3>
+            </div>
+            <div class="incrementer__button">+</div>
+          </div>
+        </div>
+        <div class="drop-down-list__element">
+          <div class="element-text">
+            <h3>2</h3>
+          </div>
+          <div class="incrementer">
+            <div class="incrementer__button_disabled incrementer__button">-</div>
+            <div class="incrementer__value">
+              <h3>0</h3>
+            </div>
+            <div class="incrementer__button">+</div>
+          </div>
+        </div>
+        <div class="drop-down-list__element">
+          <div class="element-text">
+            <h3>3</h3>
+          </div>
+          <div class="incrementer">
+            <div class="incrementer__button_disabled incrementer__button">-</div>
+            <div class="incrementer__value">
+              <h3>0</h3>
+            </div>
+            <div class="incrementer__button">+</div>
+          </div>
+        </div>
+        <div class="drop-down-list__element">
+          <div class="element-text">
+            <h3>4</h3>
+          </div>
+          <div class="incrementer">
+            <div class="incrementer__button_disabled incrementer__button">-</div>
+            <div class="incrementer__value">
+              <h3>0</h3>
+            </div>
+            <div class="incrementer__button">+</div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <div class="checkbox-button-wrapper" onclick="onCheckboxClick(my3)">
+      <div class="checkbox-button" id="my3">
+        <div class="checkbox-button__mark"></div>
+      </div>
+      <p>Hello there</p>
+    </div><br>
+    <div class="checkbox-button-wrapper" onclick="onCheckboxClick(my4)">
+      <div class="checkbox-button checked" id="my4">
+        <div class="checkbox-button__mark checked"></div>
+      </div>
+      <p>Hello there</p>
+    </div><br>
+    <div class="radio-button-wrapper" onclick="onRadioClick(my5, 'mys1')">
+      <div class="radio-button mys1 selected" id="my5">
+        <div class="radio-button__mark"></div>
+      </div>
+      <p>Are you mine</p>
+    </div><br>
+    <div class="radio-button-wrapper" onclick="onRadioClick(my6, 'mys1')">
+      <div class="radio-button mys1" id="my6">
+        <div class="radio-button__mark"></div>
+      </div>
+      <p>Are you not mine</p>
+    </div><br>
+    <div class="toggle-button-wrapper" onclick="onToggleClick(&quot;tg1&quot;)">
+      <div class="toggle-button toggled" id="tg1">
+        <div class="toggle-button__mark"></div>
+      </div>
+      <p>Subscribe</p>
+    </div><br>
+    <div class="toggle-button-wrapper" onclick="onToggleClick(&quot;tg2&quot;)">
+      <div class="toggle-button" id="tg2">
+        <div class="toggle-button__mark"></div>
+      </div>
+      <p>Receive messages</p>
+    </div><br>
+    <div class="like-button-wrapper" onclick="onLikeClick(&quot;lb1&quot;)">
+      <div class="like-button liked" id="lb1">
+        <div class="like-button__mark"><i class="material-icons">favorite_border</i></div>
+        <p>12</p>
+      </div>
+    </div><br>
+    <div class="like-button-wrapper" onclick="onLikeClick(&quot;lb2&quot;)">
+      <div class="like-button" id="lb2">
+        <div class="like-button__mark"><i class="material-icons">favorite_border</i></div>
+        <p>2</p>
+      </div>
+    </div>
+  <script type="text/javascript" src="index.bundle.js"></script></body>
 </html>
