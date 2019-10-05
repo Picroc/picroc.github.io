@@ -1,5 +1,7 @@
 .radio-button-wrapper {
     cursor: pointer;
+    display: inline-block;
+    
     & .radio-button {
         width: 20px;
         height: 20px;

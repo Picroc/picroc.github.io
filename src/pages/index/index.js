@@ -6,5 +6,6 @@ import '../../components/drop-down/drop-down';
 import '../../components/checkbox-button/checkbox-button';
 import '../../components/radio-button/radio-button';
 import '../../components/toggle-button/toggle-button';
+import '../../components/like-button/like-button';
 
 console.log('on index page');

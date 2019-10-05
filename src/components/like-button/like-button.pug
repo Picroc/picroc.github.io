@@ -1,0 +1,6 @@
+mixin like-button(id, value, liked)
+    .like-button-wrapper(onclick=`onLikeClick("${id}")`)
+        .like-button(id= id, class= liked ? 'liked' : '')
+            .like-button__mark
+                i.material-icons favorite_border
+            p= value

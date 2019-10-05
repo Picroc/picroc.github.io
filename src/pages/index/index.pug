@@ -4,6 +4,7 @@ include ../../components/drop-down/drop-down
 include ../../components/checkbox-button/checkbox-button
 include ../../components/radio-button/radio-button
 include ../../components/toggle-button/toggle-button
+include ../../components/like-button/like-button
 block title
     | Index page
 block main
@@ -29,6 +30,10 @@ block main
     +toggle-button('tg1', 'Subscribe', true)
     br
     +toggle-button('tg2', 'Receive messages', false)
+    br
+    +like-button('lb1', 12, true)
+    br
+    +like-button('lb2', 2, false)
     
 
     
