@@ -1,0 +1,5 @@
+mixin toggle-button(id, text, toggled)
+    .toggle-button-wrapper(onclick=`onToggleClick("${id}")`)
+        .toggle-button(id= id, class= toggled ? 'toggled' : '')
+            .toggle-button__mark
+        p= text

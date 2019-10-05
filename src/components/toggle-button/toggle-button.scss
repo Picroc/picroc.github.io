@@ -1,0 +1,41 @@
+.toggle-button-wrapper {
+    cursor: pointer;
+    .toggle-button {
+        display: inline-block;
+
+        width: 40px;
+        height: 20px;
+
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 10px;
+
+        margin-right: 10px;
+
+        & .toggle-button__mark {
+            width: 12px;
+            height: 12px;
+
+            border-radius: 10px;
+            margin-top: 3px;
+            margin-left: 3px;
+
+            background: rgba(31, 32, 65, 0.25);
+        }
+    }
+
+    .toggle-button.toggled {
+        border: 1px solid #BC9CFF;
+        & .toggle-button__mark {
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            margin-left: 23px;
+        }
+    }
+
+    p {
+        display: inline-block;
+        vertical-align: top;
+
+        line-height: 20px;
+        margin: 0;
+    }
+}

@@ -3,6 +3,7 @@ include ../../components/text-field/text-field
 include ../../components/drop-down/drop-down
 include ../../components/checkbox-button/checkbox-button
 include ../../components/radio-button/radio-button
+include ../../components/toggle-button/toggle-button
 block title
     | Index page
 block main
@@ -24,6 +25,10 @@ block main
     +radio-button('my5', 'mys1', 'Are you mine', true)
     br
     +radio-button('my6', 'mys1', 'Are you not mine', false)
+    br
+    +toggle-button('tg1', 'Subscribe', true)
+    br
+    +toggle-button('tg2', 'Receive messages', false)
     
 
     
