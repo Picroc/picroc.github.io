@@ -1,11 +1,13 @@
 extends ../../base
 include ../../components/text-field/text-field
+include ../../components/text-field/text-field_masked
 include ../../components/drop-down/drop-down
 include ../../components/checkbox-button/checkbox-button
 include ../../components/radio-button/radio-button
 include ../../components/toggle-button/toggle-button
 include ../../components/like-button/like-button
 include ../../components/rate-button/rate-button
+include ../../components/click-button/click-button
 block title
     | Index page
 block main
@@ -15,6 +17,7 @@ block main
     p Hello theere
     br
     +text-field
+    +text-field_masked
     br
     +drop-down('my', 'ДД.ММ.ГГГГ', {date: true}, 'Baths')
     br
@@ -37,6 +40,20 @@ block main
     +like-button('lb2', 2, false)
     br
     +rate-button('rb1', 0)
+    br
+    +click-button('cb1', 'Click me')
+    br
+    +click-button('cb2', 'Click me', 'faded')
+    br
+    +click-button('cb3', 'Click me', 'outbound')
+    br
+    +click-button('cb5', 'Click me', 'outbound-faded')
+    br
+    +click-button('cb4', 'Click me', 'simple')
+    br
+    +click-button('cb4', 'Click me', 'simple-faded')
+    br
+    +click-button('cb4', 'Click me', 'big-arrow')
     
 
     

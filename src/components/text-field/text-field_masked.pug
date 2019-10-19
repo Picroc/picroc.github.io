@@ -1,0 +1,3 @@
+mixin text-field_masked
+    input.text-field.text-field_masked(type="text")
+    script jQuery(function($) {$('.text-field_masked').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' });})

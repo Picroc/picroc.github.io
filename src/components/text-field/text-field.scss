@@ -20,4 +20,8 @@
     &:hover,&:focus {
         border: 1px solid rgba(31, 32, 65, 0.5);
     }
+
+    &_masked::placeholder {
+        color: rgba($dark-shade, 0.25)
+    }
 }

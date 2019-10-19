@@ -1,0 +1,87 @@
+.click-button {
+    cursor: pointer;
+    display: inline-block;
+    width: 99px;
+    height: 44px;
+
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+
+    & h3 {
+        margin: 0;
+        text-align: center;
+        color: #FFF;
+        line-height: 44px;
+    }
+
+    &_faded, &_outbound-faded {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    &_outbound, &_outbound-faded {
+        position: relative;
+        & h3 {
+            color: #BC9CFF;
+            z-index: 1;
+            position: relative;
+        }
+    }
+
+    &_outbound::before, &_outbound-faded::before {
+        z-index: 0;
+        background: #FFF;
+
+        width: 95px;
+        height: 40px;
+
+        border-radius: 22px;
+
+        content: '';
+        display: inline-block;
+        top: 2px;
+        left: 2px;
+        position: absolute;
+    }
+
+    &_simple, &_simple-faded {
+        width: auto;
+        height: auto;
+
+        background: initial;
+        border-radius: 0;
+
+        & h3 { 
+            color: #BC9CFF;
+            line-height: initial;
+        }
+
+        &-faded h3 {
+            color: rgba(31, 32, 65, 0.5);
+        }
+    }
+
+    &_big-arrow {
+        width: 320px;
+
+        &::after {
+            content: 'arrow_forward';
+
+            width: 44px;
+            height: 44px;
+
+            font-family: 'Material Icons';
+            font-size: 24px;
+            line-height: 44px;
+
+            text-align: center;
+
+            display: inline-block;
+            position: relative;
+            left: 276px;
+            top: -44px;
+
+            color: #FFF;
+        }
+    }
+}
