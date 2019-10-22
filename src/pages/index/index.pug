@@ -8,6 +8,8 @@ include ../../components/toggle-button/toggle-button
 include ../../components/like-button/like-button
 include ../../components/rate-button/rate-button
 include ../../components/click-button/click-button
+include ../../components/pagination/pagination
+include ../../components/range-slider/range-slider
 block title
     | Index page
 block main
@@ -54,6 +56,10 @@ block main
     +click-button('cb4', 'Click me', 'simple-faded')
     br
     +click-button('cb4', 'Click me', 'big-arrow')
+    br
+    +pagination('pg1', 180, 12, 'вариантов аренды')
+    br
+    +range-slider('rs1', 0, 15000, 5000, 10000)
     
 
     

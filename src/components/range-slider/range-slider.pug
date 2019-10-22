@@ -1,0 +1,8 @@
+mixin range-slider(id, min, max, from, to, lb)
+    - lb = lb || 'P'
+    .range-slider-wrapper(id= id)
+        .range-slider__label
+            span= '' + from + lb + ' - ' + to + lb
+        .range-slider
+            input(type="text", name="range", data-min= min, data-max= max, data-from= from, data-to= to, onchange=`updateSliderValue('${id}', '${lb}')` ).js-range-slider
+    script jQuery( function ($) { $('.js-range-slider').ionRangeSlider({type: "double",grid: false, skin: 'round', 'hide_min_max': true, 'hide_from_to': true})})

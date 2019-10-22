@@ -1,0 +1,51 @@
+.range-slider-wrapper {
+    width: 266px;
+    display: inline-block;
+
+    & .range-slider {
+        & .irs--round {
+            height: 28px;
+        }
+        & .irs-handle {
+            top: 2px;
+
+            width: 12px;
+            height: 12px;
+
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border: 2px solid #FFF;
+            border-radius: 10px;
+
+            box-shadow: none;
+        }
+
+        & .irs-bar {
+            top: 5px;
+
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+            height: 6px;
+        }
+
+        & .irs-line {
+            top: 5px;
+
+            height: 6px;
+
+            background: #FFF;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            border-radius: 3px;
+        }
+    }
+
+    & .range-slider__label {
+        display: block;
+        text-align: right;
+        & span {
+            font-size: 12px;
+            line-height: 15px;
+
+            color: rgba(31, 32, 65, 0.5);
+        }
+    }
+}

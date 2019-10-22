@@ -63,6 +63,7 @@
 
     &_big-arrow {
         width: 320px;
+        overflow: hidden;
 
         &::after {
             content: 'arrow_forward';

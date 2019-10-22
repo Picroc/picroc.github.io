@@ -11,5 +11,7 @@ import '../../components/like-button/like-button';
 import '../../components/rate-button/rate-button';
 import '../../components/click-button/click-button';
 import '../../components/text-field/text-field_masked';
+import '../../components/pagination/pagination';
+import '../../components/range-slider/range-slider';
 
 console.log('on index page');

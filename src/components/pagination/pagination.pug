@@ -1,0 +1,24 @@
+mixin pagination(id, itemsNum, itemsOnePage, desc, chosen)
+    - chosen = chosen || 0
+    .pagination-wrapper
+        .pagination(id=id)
+            - const pagesNum = Math.ceil(itemsNum/itemsOnePage)
+            - let idx = 0
+            if(pagesNum < 6)
+                while idx < 5
+                    .pagination__item(class=chosen==idx ? 'pagination__item_chosen' : '')
+                        span= ++idx
+                .pagination__item.pagination__item_next
+                    span arrow_forward
+            else
+                while idx < 3
+                    .pagination__item(class=chosen==idx ? 'pagination__item_chosen' : '')
+                        span= ++idx
+                .pagination__item.pagination__item_more
+                    span ...
+                .pagination__item(class=chosen==idx ? 'pagination__item_chosen' : '')
+                    span= pagesNum
+                .pagination__item.pagination__item_next
+                    span arrow_forward
+        .description
+            span= `1 - ${itemsOnePage} из ${itemsNum < 100 ? itemsNum : '100+'} ${desc}`
