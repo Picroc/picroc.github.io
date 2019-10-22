@@ -13,5 +13,6 @@ import '../../components/click-button/click-button';
 import '../../components/text-field/text-field_masked';
 import '../../components/pagination/pagination';
 import '../../components/range-slider/range-slider';
+import '../../components/expandable-checkbox-list/expandable-checkbox-list';
 
 console.log('on index page');

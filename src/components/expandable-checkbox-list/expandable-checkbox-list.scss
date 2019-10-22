@@ -1,0 +1,40 @@
+.expandable-checkbox-list-wrapper {
+    width: 266px;
+
+    & .expandable-checkbox-list {
+        display: none;
+        &_expanded {
+            display: block;
+            & .expandable-checkbox-list__item {
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    & .expandable-checkbox-list__title {
+        overflow: hidden;
+        cursor: pointer;
+
+        & h3 {
+            display: inline-block;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+
+            line-height: 44px;
+        }
+
+        & i {
+            width: 44px;
+            height: 44px;
+
+            overflow: hidden;
+
+            line-height: 44px;
+            text-align: center;
+
+            float: right;
+        }
+    }
+}

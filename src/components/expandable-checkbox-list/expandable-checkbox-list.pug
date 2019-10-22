@@ -1,0 +1,13 @@
+include ../checkbox-button/checkbox-button
+
+mixin expandable-checkbox-list(id, title, expanded, ...items)
+    .expandable-checkbox-list-wrapper(id= id)
+        .expandable-checkbox-list__title(onclick=`expandCheckboxList('${id}')`)
+            h3= title
+            i.material-icons= expanded ? 'expand_less' : 'expand_more'
+        .expandable-checkbox-list(class= expanded ? 'expandable-checkbox-list_expanded' : '')
+            - let counter = 0
+            each item in items
+                .expandable-checkbox-list__item
+                    +checkbox-button(id + '_' + counter, item, false)
+                - counter++
