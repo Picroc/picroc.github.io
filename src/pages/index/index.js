@@ -16,5 +16,6 @@ import '../../components/range-slider/range-slider';
 import '../../components/expandable-checkbox-list/expandable-checkbox-list';
 import '../../components/features/features';
 import '../../components/bullet-list/bullet-list';
+import '../../components/comment/comment';
 
 console.log('on index page');

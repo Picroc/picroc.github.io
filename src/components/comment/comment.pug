@@ -1,0 +1,17 @@
+include ../like-button/like-button
+
+mixin comment(id, user, when, likes, content)
+    .comment(id= id)
+        .comment__header
+            .avatar_circle
+                img(src="https://i.ytimg.com/vi/KEkrWRHCDQU/maxresdefault.jpg", alt="avatar")
+            .title
+                span
+                    b= user
+                    br
+                    = when
+        .comment__contents
+            .comment__like
+                +like-button(`like_cm_${id}`, likes, true)
+            .comment__content
+                p= content
