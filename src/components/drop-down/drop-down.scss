@@ -8,6 +8,7 @@ $root: 'drop-down';
 }
 
 .drop-down {
+    user-select: none;
     height: 44px;
 
     border: 1px solid rgba(31, 32, 65, 0.25);
@@ -89,6 +90,7 @@ $root: 'drop-down';
 
 .incrementer {
     float: right;
+    user-select: none;
 
     &__button {
         display: inline-block;

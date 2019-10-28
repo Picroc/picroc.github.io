@@ -1,14 +1,19 @@
 include __element/drop-down__element
+
 mixin drop-down(id, text, mods, ...elems)
     .drop-down-wrapper
         .drop-down(onclick=mods.date ? '' : `dropDownClickHandler(${id})`, class=mods.date ? 'drop-down_date' : '')
-            p= text
+            p(id= id)= text
             i.material-icons keyboard_arrow_down
             - const opened=mods.opened || false;
         if !mods.date
             div(id= id, class=opened ? 'opened' : '').drop-down-list
+                - let counter = 0
                 each elem in elems
-                        +element({text: elem, value: 0}).drop-down-list__element_normal
+                        - const iid = id + '_item_' + counter
+                        +element(elem, iid).drop-down-list__element_normal
+                        - counter++
+            script= `jQuery( function ($) { getDropDownText('${id}') })`
         else
             div(id= id, class=opened ? 'opened' : '').drop-down-list.drop-down-list_date
                 h3 Placeholder for calendar

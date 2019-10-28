@@ -1,10 +1,10 @@
-mixin element(el)
-    .drop-down-list__element
+mixin element(el, id)
+    .drop-down-list__element(id= id)
         .element-text
             h3= el.text
         .incrementer
-            div(class= el.value===0 ? 'incrementer__button_disabled' : '').incrementer__button -
+            div(class= el.value===0 ? 'incrementer__button_disabled' : '', onclick=`dropClickHandler('${id}', '-')`).incrementer__button -
             .incrementer__value
                 h3= el.value
-            .incrementer__button +
+            .incrementer__button(onclick=`dropClickHandler('${id}', '+')`) +
 

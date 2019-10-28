@@ -28,7 +28,8 @@ block main
     br
     +drop-down('my', 'ДД.ММ.ГГГГ', {date: true}, 'Baths')
     br
-    +drop-down('my2', 'Number of classesssssss', {}, 1, 2, 3, 4)
+    - const dropDown = [{text: 'спальни',value: '2'},{text: 'кровати',value: '2'},{text: 'ванные комнаты',value: '0'}]
+    +drop-down('my2', 'Number of classesssssss', {}, ...dropDown)
     br
     +checkbox-button('my3', 'Hello there')
     br
