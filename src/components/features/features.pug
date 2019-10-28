@@ -1,0 +1,19 @@
+mixin feature-item(icon, title, text)
+    .features__item
+        i.material-icons= icon
+        .features__item-text
+            span
+                b= title
+                br
+                = text
+        hr
+
+mixin features(id, ...features)
+    .features
+        each feature in features
+            if feature == 'noice_cancel'
+                +feature-item('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
+            if feature == 'windows'
+                +feature-item('location_city', 'Удобство', 'Окно в каждой из спален')
+                
+            

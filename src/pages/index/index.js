@@ -14,5 +14,6 @@ import '../../components/text-field/text-field_masked';
 import '../../components/pagination/pagination';
 import '../../components/range-slider/range-slider';
 import '../../components/expandable-checkbox-list/expandable-checkbox-list';
+import '../../components/features/features';
 
 console.log('on index page');

@@ -11,6 +11,8 @@ include ../../components/click-button/click-button
 include ../../components/pagination/pagination
 include ../../components/range-slider/range-slider
 include ../../components/expandable-checkbox-list/expandable-checkbox-list
+include ../../components/features/features
+
 block title
     | Index page
 block main
@@ -63,6 +65,8 @@ block main
     +range-slider('rs1', 0, 15000, 5000, 10000)
     br
     +expandable-checkbox-list('clist1', 'Some good elements', false, 'Money', 'Drugs', 'Guns', 'Check')
+    br
+    +features('fl1', 'noice_cancel', 'windows')
     
 
     

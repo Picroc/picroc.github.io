@@ -1,0 +1,31 @@
+.features {
+    display: inline-block;
+    width: 280px;
+
+    &__item {
+
+        & i {
+            width: 48px;
+            height: 48px;
+            overflow: hidden;
+            font-size: 48px;
+
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &-text {
+            display: inline-block;
+            overflow: hidden;
+
+            margin-left: 10px;
+        }
+
+        & hr {
+            border: 0;
+            height: 1px;
+            background: rgba(31, 32, 65, 0.1);
+        }
+    }
+}
