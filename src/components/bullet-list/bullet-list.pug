@@ -1,0 +1,8 @@
+mixin bullet-list(id, ...items)
+    .bullet-list(id= id)
+        each item in items
+            .bullet-list__item
+                .bullet-list__bullet-wrapper
+                    .bullet-list__bullet
+                .bullet-list__text
+                    span= item

@@ -1,6 +1,14 @@
 mixin checkbox-button(id, text, checked, desc)
     .checkbox-button-wrapper(onclick=`onCheckboxClick(${id})`)
-        .checkbox-button(id=id, class=checked ? 'checked' : '')
+        .checkbox-button(id=id, class=checked ? 'checked' : '', class= desc ? 'checkbox-button_rich' : '')
             .checkbox-button__mark(class=checked ? 'checked' : '')
-        p= text
+        if desc
+            .checkbox-button-wrapper__text_rich 
+                span
+                    b= text
+                .text__description
+                    span= desc
+        else
+            .checkbox-button-wrapper__text
+                p= text
 

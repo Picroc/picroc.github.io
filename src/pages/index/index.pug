@@ -12,6 +12,7 @@ include ../../components/pagination/pagination
 include ../../components/range-slider/range-slider
 include ../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../components/features/features
+include ../../components/bullet-list/bullet-list
 
 block title
     | Index page
@@ -67,6 +68,13 @@ block main
     +expandable-checkbox-list('clist1', 'Some good elements', false, 'Money', 'Drugs', 'Guns', 'Check')
     br
     +features('fl1', 'noice_cancel', 'windows')
+    br
+    +checkbox-button('rb1', 'Помощник для инвалидов', false, 'На 1 этаже вас встретит специалист и проводит до номера.')
+    br
+    +checkbox-button('rb2', 'Широкий коридор', false, 'Ширина коридоров в номере не менее 91 см.')
+    br
+    +bullet-list('bl1', 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
+
     
 
     

@@ -1,0 +1,35 @@
+.bullet-list {
+    display: inline-block;
+
+    &__item {
+        margin-bottom: 10px;
+    }
+
+    &__bullet {
+        width: 10px;
+        height: 10px;
+
+        border-radius: 5px;
+
+        background: rgba(31, 32, 65, 0.25);
+
+        display: inline-block;
+        vertical-align: middle;
+
+        margin: auto;
+    }
+
+    &__bullet-wrapper {
+        display: inline-block;
+        margin-right: 12px;
+
+        line-height: 23px;
+
+        vertical-align: top;
+    }
+
+    &__text {
+        display: inline-block;
+        max-width: 270px;
+    }
+}

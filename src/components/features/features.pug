@@ -9,7 +9,7 @@ mixin feature-item(icon, title, text)
         hr
 
 mixin features(id, ...features)
-    .features
+    .features(id= id)
         each feature in features
             if feature == 'noice_cancel'
                 +feature-item('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
