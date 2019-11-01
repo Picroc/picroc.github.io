@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
     <title>Index page
     </title>
   </head>
@@ -12,10 +16,12 @@
     <h2>Just Testin</h2>
     <h3>More tests</h3>
     <p>Hello theere</p><br>
-    <input class="text-field" type="text"><br>
+    <input class="text-field" type="text">
+    <input class="text-field text-field_masked" type="text">
+    <script>jQuery(function($) {$('.text-field_masked').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' });})</script><br>
     <div class="drop-down-wrapper">
       <div class="drop-down drop-down_date" onclick="">
-        <p>ДД.ММ.ГГГГ</p><i class="material-icons">keyboard_arrow_down</i>
+        <p id="my">ДД.ММ.ГГГГ</p><i class="material-icons">keyboard_arrow_down</i>
       </div>
       <div class="drop-down-list drop-down-list_date" id="my">
         <h3>Placeholder for calendar</h3>
@@ -23,70 +29,63 @@
     </div><br>
     <div class="drop-down-wrapper">
       <div class="drop-down" onclick="dropDownClickHandler(my2)">
-        <p>Number of classesssssss</p><i class="material-icons">keyboard_arrow_down</i>
+        <p id="my2">Number of classesssssss</p><i class="material-icons">keyboard_arrow_down</i>
       </div>
       <div class="drop-down-list" id="my2">
-        <div class="drop-down-list__element">
+        <div class="drop-down-list__element" id="my2_item_0">
           <div class="element-text">
-            <h3>1</h3>
+            <h3>спальни</h3>
           </div>
           <div class="incrementer">
-            <div class="incrementer__button_disabled incrementer__button">-</div>
+            <div class="incrementer__button" onclick="dropClickHandler('my2_item_0', '-')">-</div>
             <div class="incrementer__value">
-              <h3>0</h3>
+              <h3>2</h3>
             </div>
-            <div class="incrementer__button">+</div>
+            <div class="incrementer__button" onclick="dropClickHandler('my2_item_0', '+')">+</div>
           </div>
         </div>
-        <div class="drop-down-list__element">
+        <div class="drop-down-list__element" id="my2_item_1">
           <div class="element-text">
-            <h3>2</h3>
+            <h3>кровати</h3>
           </div>
           <div class="incrementer">
-            <div class="incrementer__button_disabled incrementer__button">-</div>
+            <div class="incrementer__button" onclick="dropClickHandler('my2_item_1', '-')">-</div>
             <div class="incrementer__value">
-              <h3>0</h3>
+              <h3>2</h3>
             </div>
-            <div class="incrementer__button">+</div>
+            <div class="incrementer__button" onclick="dropClickHandler('my2_item_1', '+')">+</div>
           </div>
         </div>
-        <div class="drop-down-list__element">
+        <div class="drop-down-list__element" id="my2_item_2">
           <div class="element-text">
-            <h3>3</h3>
+            <h3>ванные комнаты</h3>
           </div>
           <div class="incrementer">
-            <div class="incrementer__button_disabled incrementer__button">-</div>
+            <div class="incrementer__button" onclick="dropClickHandler('my2_item_2', '-')">-</div>
             <div class="incrementer__value">
               <h3>0</h3>
             </div>
-            <div class="incrementer__button">+</div>
-          </div>
-        </div>
-        <div class="drop-down-list__element">
-          <div class="element-text">
-            <h3>4</h3>
-          </div>
-          <div class="incrementer">
-            <div class="incrementer__button_disabled incrementer__button">-</div>
-            <div class="incrementer__value">
-              <h3>0</h3>
-            </div>
-            <div class="incrementer__button">+</div>
+            <div class="incrementer__button" onclick="dropClickHandler('my2_item_2', '+')">+</div>
           </div>
         </div>
       </div>
+      <script>jQuery( function ($) { getDropDownText('my2') })</script>
     </div><br>
     <div class="checkbox-button-wrapper" onclick="onCheckboxClick(my3)">
       <div class="checkbox-button" id="my3">
         <div class="checkbox-button__mark"></div>
       </div>
-      <p>Hello there</p>
+      <div class="checkbox-button-wrapper__text">
+        <p>Hello there</p>
+      </div>
     </div><br>
     <div class="checkbox-button-wrapper" onclick="onCheckboxClick(my4)">
       <div class="checkbox-button checked" id="my4">
         <div class="checkbox-button__mark checked"></div>
       </div>
-      <p>Hello there</p>
+      <div class="checkbox-button-wrapper__text">
+        <p>Hello there</p>
+      </div>
     </div><br>
     <div class="radio-button-wrapper" onclick="onRadioClick(my5, 'mys1')">
       <div class="radio-button mys1 selected" id="my5">
@@ -130,6 +129,157 @@
       <div class="rate-button__mark_3" onclick="onRateClick(&quot;rb1&quot;, &quot;3&quot;)"><i class="material-icons">star_border</i></div>
       <div class="rate-button__mark_4" onclick="onRateClick(&quot;rb1&quot;, &quot;4&quot;)"><i class="material-icons">star_border</i></div>
       <div class="rate-button__mark_5" onclick="onRateClick(&quot;rb1&quot;, &quot;5&quot;)"><i class="material-icons">star_border</i></div>
+    </div><br>
+    <div class="click-button" id="cb1">
+      <h3>Click me</h3>
+    </div><br>
+    <div class="click-button click-button_faded" id="cb2">
+      <h3>Click me</h3>
+    </div><br>
+    <div class="click-button click-button_outbound" id="cb3">
+      <h3>Click me</h3>
+    </div><br>
+    <div class="click-button click-button_outbound-faded" id="cb5">
+      <h3>Click me</h3>
+    </div><br>
+    <div class="click-button click-button_simple" id="cb4">
+      <h3>Click me</h3>
+    </div><br>
+    <div class="click-button click-button_simple-faded" id="cb4">
+      <h3>Click me</h3>
+    </div><br>
+    <div class="click-button click-button_big-arrow" id="cb4">
+      <h3>Click me</h3>
+    </div><br>
+    <div class="pagination-wrapper">
+      <div class="pagination" id="pg1">
+        <div class="pagination__item pagination__item_chosen"><span>1</span></div>
+        <div class="pagination__item"><span>2</span></div>
+        <div class="pagination__item"><span>3</span></div>
+        <div class="pagination__item pagination__item_more"><span>...</span></div>
+        <div class="pagination__item"><span>15</span></div>
+        <div class="pagination__item pagination__item_next"><span>arrow_forward</span></div>
+      </div>
+      <div class="description"><span>1 - 12 из 100+ вариантов аренды</span></div>
+    </div><br>
+    <div class="range-slider-wrapper" id="rs1">
+      <div class="range-slider__label"><span>5000P - 10000P</span></div>
+      <div class="range-slider">
+        <input class="js-range-slider" type="text" name="range" data-min="0" data-max="15000" data-from="5000" data-to="10000" onchange="updateSliderValue('rs1', 'P')">
+      </div>
+    </div>
+    <script>jQuery( function ($) { $('.js-range-slider').ionRangeSlider({type: "double",grid: false, skin: 'round', 'hide_min_max': true, 'hide_from_to': true})})</script><br>
+    <div class="expandable-checkbox-list-wrapper" id="clist1">
+      <div class="expandable-checkbox-list__title" onclick="expandCheckboxList('clist1')">
+        <h3>Some good elements</h3><i class="material-icons">expand_more</i>
+      </div>
+      <div class="expandable-checkbox-list">
+        <div class="expandable-checkbox-list__item">
+          <div class="checkbox-button-wrapper" onclick="onCheckboxClick(clist1_0)">
+            <div class="checkbox-button" id="clist1_0">
+              <div class="checkbox-button__mark"></div>
+            </div>
+            <div class="checkbox-button-wrapper__text">
+              <p>Money</p>
+            </div>
+          </div>
+        </div>
+        <div class="expandable-checkbox-list__item">
+          <div class="checkbox-button-wrapper" onclick="onCheckboxClick(clist1_1)">
+            <div class="checkbox-button" id="clist1_1">
+              <div class="checkbox-button__mark"></div>
+            </div>
+            <div class="checkbox-button-wrapper__text">
+              <p>Drugs</p>
+            </div>
+          </div>
+        </div>
+        <div class="expandable-checkbox-list__item">
+          <div class="checkbox-button-wrapper" onclick="onCheckboxClick(clist1_2)">
+            <div class="checkbox-button" id="clist1_2">
+              <div class="checkbox-button__mark"></div>
+            </div>
+            <div class="checkbox-button-wrapper__text">
+              <p>Guns</p>
+            </div>
+          </div>
+        </div>
+        <div class="expandable-checkbox-list__item">
+          <div class="checkbox-button-wrapper" onclick="onCheckboxClick(clist1_3)">
+            <div class="checkbox-button" id="clist1_3">
+              <div class="checkbox-button__mark"></div>
+            </div>
+            <div class="checkbox-button-wrapper__text">
+              <p>Check</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <div class="features" id="fl1">
+      <div class="features__item"><i class="material-icons">insert_emoticon</i>
+        <div class="features__item-text"><span><b>Комфорт</b><br>Шумопоглощающие стены</span></div>
+        <hr>
+      </div>
+      <div class="features__item"><i class="material-icons">location_city</i>
+        <div class="features__item-text"><span><b>Удобство</b><br>Окно в каждой из спален</span></div>
+        <hr>
+      </div>
+    </div><br>
+    <div class="checkbox-button-wrapper" onclick="onCheckboxClick(rb1)">
+      <div class="checkbox-button checkbox-button_rich" id="rb1">
+        <div class="checkbox-button__mark"></div>
+      </div>
+      <div class="checkbox-button-wrapper__text_rich"> <span><b>Помощник для инвалидов</b></span>
+        <div class="text__description"><span>На 1 этаже вас встретит специалист и проводит до номера.</span></div>
+      </div>
+    </div><br>
+    <div class="checkbox-button-wrapper" onclick="onCheckboxClick(rb2)">
+      <div class="checkbox-button checkbox-button_rich" id="rb2">
+        <div class="checkbox-button__mark"></div>
+      </div>
+      <div class="checkbox-button-wrapper__text_rich"> <span><b>Широкий коридор</b></span>
+        <div class="text__description"><span>Ширина коридоров в номере не менее 91 см.</span></div>
+      </div>
+    </div><br>
+    <div class="bullet-list" id="bl1">
+      <div class="bullet-list__item">
+        <div class="bullet-list__bullet-wrapper">
+          <div class="bullet-list__bullet"></div>
+        </div>
+        <div class="bullet-list__text"><span>Нельзя с питомцами</span></div>
+      </div>
+      <div class="bullet-list__item">
+        <div class="bullet-list__bullet-wrapper">
+          <div class="bullet-list__bullet"></div>
+        </div>
+        <div class="bullet-list__text"><span>Без вечеринок и мероприятий</span></div>
+      </div>
+      <div class="bullet-list__item">
+        <div class="bullet-list__bullet-wrapper">
+          <div class="bullet-list__bullet"></div>
+        </div>
+        <div class="bullet-list__text"><span>Время прибытия — после 13:00, а выезд до 12:00</span></div>
+      </div>
+    </div><br>
+    <div class="comment" id="comment1">
+      <div class="comment__header">
+        <div class="avatar_circle"><img src="https://i.ytimg.com/vi/KEkrWRHCDQU/maxresdefault.jpg" alt="avatar"></div>
+        <div class="title"><span><b>Alexey Logachev</b><br>1 day ago</span></div>
+      </div>
+      <div class="comment__contents">
+        <div class="comment__like">
+          <div class="like-button-wrapper" onclick="onLikeClick(&quot;like_cm_comment1&quot;)">
+            <div class="like-button liked" id="like_cm_comment1">
+              <div class="like-button__mark"><i class="material-icons">favorite_border</i></div>
+              <p>12</p>
+            </div>
+          </div>
+        </div>
+        <div class="comment__content">
+          <p>Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+        </div>
+      </div>
     </div>
   <script type="text/javascript" src="index.bundle.js"></script></body>
 </html>
